@@ -1,67 +1,81 @@
-<html> 
-<title>Claveria</title> 
-<style> 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Travel Destination's in Claveria</title>
+	<script type='text/javascript'>alert('Welcome');</script>
 
-ul{ 
-list-style:none; 
-margin:0; 
-padding:20; 
-overflow:hidden; 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body 
+
+{
+  font-family: "Lato", sans-serif;
 }
 
-a:link, a:visited{ 
-display:block; 
-font-family: Arial; 
-color:black; 
-font-weight: bold; 
-font-size: 20px; 
-padding: 5px; 
-width:170px; 
-padding:5px; 
-text-align: center; 
-text-transform: uppercase; 
-text-decoration: none; 
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
-a:hover, a:active{ 
-padding: 10px; 
-border: 2px solid black; 
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
 
-li{ 
-float: right; 
+.sidenav a:hover {
+  color: #f1f1f1;
 }
 
-body { 
-background-color:#cfebfd; 
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 
-</style> 
-<div align = "center"> 
-<h1> 
-My Site
-</h1> 
 
-<!Navigation Bar> 
-<ul style= "position:center; width:750px; height:30px;"> 
-<li><a href="claveria.html">Home</a></li> 
-<li><a href="about.html">About</a></li> 
-<li><a href="blog.html">Blog</a></li> 
-<li><a href="contacts.html">Contacts</a></li> 
-</ul> 
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 
-<div align = "center"> 
+body { background-color:#cfebfd;
+}
 
-<div style="position: absolute; right:100px; "> 
-<input type="text" name="text" class="search" placholder="Search"> 
-<input type="submit" name="submit" class="submit" value="Search"> 
-</div> 
-</div>
+</style>
+</head>
+<body>
+
 <div align = "center"> 
 <h3 style="font-family: Arial; font-size: 30px; color:black; padding:3px; margin-top:5px;">Travel 
 Destination's in Claveria </h3></center> 
-</div> 
+</div>
 
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
+  <a href="about.html"><i class="fa fa-fw fa-globe"></i> About</a>
+  <a href="contacts.html"><i class="fa fa-fw fa-envelope"></i> Contacts</a>
+  <a href="blog.html"><i class="fa fa-fw fa-user"></i>Blog</a>
+  <a href="comment.html"><i class="fa fa-fw fa-user"></i>Comment</a>
+  <a href="#search"><i class="fa fa-fw fa-search"></i>Search</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
 <div align = "center"> 
 
 <img src="Lakaylakay&Baketbaket.jpg" width="400px" height="200px"> 
@@ -70,5 +84,18 @@ Destination's in Claveria </h3></center>
 <img src="PataLightHouse.jpg" width="400px" height="200px"> 
 <img src="Claveria-port.jpg" width="400px" height="200px"> 
 <img src="ManongR.jpg" width="400px" height="200px"> 
-</div> 
-</html>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+
+</body>
+</html> 
