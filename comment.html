@@ -1,64 +1,63 @@
-<html> 
-<title>Claveria</title> 
-<style> 
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
 
-ul{ 
-list-style:none; 
-margin:0; 
-padding:20; 
-overflow:hidden; 
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
 }
 
-a:link, a:visited{ 
-display:block; 
-font-family: Arial; 
-color:black; 
-font-weight: bold; 
-font-size: 20px; 
-padding: 5px; 
-width:170px; 
-padding:5px; 
-text-align: center; 
-text-transform: uppercase; 
-text-decoration: none; 
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-a:hover, a:active{ 
-padding: 10px; 
-border: 2px solid black; 
+input[type=submit]:hover {
+  background-color: #45a049;
 }
 
-li{ 
-float: right; 
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
 }
+</style>
+</head>
+<body>
 
-	.comment{
-			background-color:#000000;
-			text-align: center;
-			font-weight: bold;
-			color: white;
-			font-size: 30px;
-			font-family: arial;
-		}
+<h3>Comment Form</h3>
 
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-body { 
-background-color:#cfebfd; 
-}
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
+    <label for="lname">Email</label>
+    <input type="text" id="lname" name="email" placeholder="Your email..">
 
-</style> 
-		<div class="postcomment">
-             <FORM>
-                    <br>Name:</b> <?php echo $_POST['name']; ?> <INPUT type="text" id="name">
-                    <br>Email:</b> <?php echo $_POST['email']; ?> <INPUT type="text" id="email">
-                    <br>Subject:</b> <?php echo $_POST['subject']; ?> <INPUT type="text" id="subject">
-                    <br>Comment:</b> <?php echo $_POST['comment']; ?> <TEXTAREA type="text" id="comment"></TEXTAREA>
-             </FORM>
-        </div>	
+    <label for="subject">Comment</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
 </html>
-
-
-
-
 
